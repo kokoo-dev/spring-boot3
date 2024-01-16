@@ -1,0 +1,7 @@
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]" # sleuth 패턴 직접 설정
+
+management:
+  tracing:
+    enabled: true
