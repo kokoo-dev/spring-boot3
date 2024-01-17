@@ -1,7 +1,18 @@
+spring:
+  cloud:
+    openfeign:
+      micrometer:
+        enabled: true # open feign & micrometer
+
 logging:
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]" # sleuth 패턴 직접 설정
 
 management:
   tracing:
-    enabled: true
+    sampling:
+      probability: 1.0
+    propagation:
+      type: W3C, B3 # B3 | B3_MULTI | W3C, produce & consume
+#      produce: b3
+#      consume: b3

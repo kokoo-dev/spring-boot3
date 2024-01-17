@@ -1,6 +1,6 @@
 package com.kokoo.springboot3.cloud;
 
-import io.micrometer.tracing.TraceContext;
+import io.micrometer.tracing.Span;
 import io.micrometer.tracing.Tracer;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -16,13 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class CloudController {
 
     private final Tracer tracer;
+    private final CloudClient cloudClient;
 
     @GetMapping("/sleuth")
     public void getSleuth(HttpServletRequest request) {
-        TraceContext traceContext = tracer.currentTraceContext().context();
-        if (traceContext != null) {
-            log.info("trace id :: {}", traceContext.traceId());
-            log.info("span id :: {}", traceContext.spanId());
+        Span span = tracer.currentSpan();
+        if (span != null) {
+            log.info("trace id :: {}", span.context().traceId());
+            log.info("span id :: {}", span.context().spanId());
         }
+
+        cloudClient.testSleuth();
     }
 }

@@ -42,6 +42,12 @@ dependencies {
 	// spring cloud sleuth -> micrometer-tracing
 	implementation 'io.micrometer:micrometer-tracing-bridge-brave'
 
+	// spring cloud feign
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	// open feign & micrometer
+	implementation 'io.github.openfeign:feign-micrometer'
+
 }
 
 dependencyManagement {
