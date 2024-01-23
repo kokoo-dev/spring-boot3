@@ -3,4 +3,5 @@ spring:
     name: spring-boot3
   cloud:
     config:
-      enabled: false
+      uri: http://localhost:8888
+      name: spring-boot3

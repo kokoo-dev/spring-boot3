@@ -26,6 +26,7 @@ Micrometer Tracing 프로젝트로 이동
 ### Spring Cloud Config
 
 - Client 변경 없음
+- <a href="https://github.com/kokoo-dev/spring-boot3-cloud-config">Server 변경 없음</a>
 
 ### Spring Cloud Openfeign
 변경 없음
