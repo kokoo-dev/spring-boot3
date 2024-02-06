@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/cloud")
+@RequestMapping("/cloud/sleuth")
 @RequiredArgsConstructor
-public class CloudController {
+public class CloudSleuthController {
 
     private final Tracer tracer;
     private final CloudClient cloudClient;
 
-    @GetMapping("/sleuth")
+    @GetMapping("")
     public void getSleuth(HttpServletRequest request) {
         Span span = tracer.currentSpan();
         if (span != null) {

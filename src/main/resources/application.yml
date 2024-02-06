@@ -1,8 +1,15 @@
+server:
+  port: 8081
+
 spring:
   cloud:
     openfeign:
       micrometer:
         enabled: true # open feign & micrometer
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        enabled: true
 
 logging:
   pattern:

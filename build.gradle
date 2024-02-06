@@ -48,6 +48,8 @@ dependencies {
 	// open feign & micrometer
 	implementation 'io.github.openfeign:feign-micrometer'
 
+	// spring cloud zookeeper
+	implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
 }
 
 dependencyManagement {
