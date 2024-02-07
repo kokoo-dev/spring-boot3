@@ -24,3 +24,7 @@ management:
       type: W3C, B3 # B3 | B3_MULTI | W3C, produce & consume
 #      produce: b3
 #      consume: b3
+
+springdoc:
+  swagger-ui:
+    enabled: true

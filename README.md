@@ -37,3 +37,10 @@ Micrometer Tracing 프로젝트로 이동
 
 ### Spring Cloud Zookeeper
 변경 없음
+
+## Swagger
+
+- <a href="https://github.com/kokoo-dev/spring-boot3/blob/d7d09f792fb43631ee5b46daeb080a8b6b9e73b6/build.gradle#L55">의존성 변경 (spring-fox -> springdoc)</a>
+- <a href="https://github.com/kokoo-dev/spring-boot3/blob/d7d09f792fb43631ee5b46daeb080a8b6b9e73b6/src/main/resources/application.yml#L28">프로퍼티 이름 변경 (springfox.documentation -> springdoc.swagger-ui)</a>
+
+그 외 migration 참고: https://springdoc.org/#migrating-from-springfox 

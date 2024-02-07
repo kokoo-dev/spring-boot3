@@ -50,6 +50,9 @@ dependencies {
 
 	// spring cloud zookeeper
 	implementation 'org.springframework.cloud:spring-cloud-starter-zookeeper-discovery'
+
+	// doc
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 }
 
 dependencyManagement {
