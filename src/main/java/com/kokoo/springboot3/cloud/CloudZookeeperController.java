@@ -2,6 +2,7 @@ package com.kokoo.springboot3.cloud;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cloud/zookeeper")
 @RequiredArgsConstructor
+@ConditionalOnProperty(prefix = "spring.cloud.zookeeper", name = "enabled", havingValue = "true")
 public class CloudZookeeperController {
 
     private final DiscoveryClient discoveryClient;
